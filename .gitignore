@@ -1,0 +1,11 @@
+#Vim
+*.swp
+
+#ipython
+.ipynb_checkpoints
+
+#Mac 
+*.DS_Store
+
+#Linux 
+*~
