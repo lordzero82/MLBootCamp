@@ -66,14 +66,14 @@ def plot_fit(X,y,minx, maxx, mu, sigma, theta, p, xlabel, ylabel, title):
     plt.title(title)
 
 def plot_lambda_selection(reg_vec,error_train,error_val):
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    plt.plot(reg_vec,error_train,'b-',reg_vec,error_val,'g-')
-    plt.title('Variation in training/validation error with lambda')
-    plt.xlabel('Lambda')
-    plt.ylabel('Training/Validation error')
-    plt.legend(["Training error","Validation error"])
-    ax.set_xscale('log')
+  fig = plt.figure()
+  ax = fig.add_subplot(111)
+  plt.plot(reg_vec,error_train,'b-',reg_vec,error_val,'g-')
+  plt.title('Variation in training/validation error with lambda')
+  plt.xlabel('Lambda')
+  plt.ylabel('Training/Validation error')
+  plt.legend(["Training error","Validation error"])
+  ax.set_xscale('log')
 
 def plot_twoclass_data(X,y,xlabel,ylabel,legend):
     fig = plt.figure()
@@ -183,9 +183,9 @@ def plot_decision_boundary_classifier(name,model,xx,yy,X_train,y_train,X_test,y_
     ax = plt.subplot(3, 4, i)
 
     if hasattr(model, "decision_function"):
-        Z = model.decision_function(np.c_[xx.ravel(), yy.ravel()])
+       Z = model.decision_function(np.c_[xx.ravel(), yy.ravel()])
     else:
-        Z = model.predict_proba(np.c_[xx.ravel(), yy.ravel()])[:, 1]
+       Z = model.predict_proba(np.c_[xx.ravel(), yy.ravel()])[:, 1]
 
     cm = plt.cm.RdBu
     cm_bright = ListedColormap(['#FF0000', '#0000FF'])
